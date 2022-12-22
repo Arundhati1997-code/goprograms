@@ -2,11 +2,15 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
-	numbers := [...]int{34, 67, 55, 33, 12, 98, 88, 76}
-	numb := numbers[0:8]
-	fmt.Println(numb)
-
+	var numbers string
+	fmt.Println("Enter the numbers:")
+	fmt.Scanln(&numbers)
+	num := strings.Split(numbers, ",")
+	fmt.Println("The numbers are:", num)
+	numb := num[0:len(num)]
+	fmt.Println("The numbers are:", numb)
 }
